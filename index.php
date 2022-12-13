@@ -12,9 +12,10 @@
     <?php
     $paragraph = "Ciao mi chiamo Dario";
     $badWord = $_GET["badword"];
-
-
-
+    $arrBadWord = str_split($badWord);
+    for ($x = 0; $x <= count($arrBadWord); $x++) {
+        echo $filter = "*";
+    }
     ?>
 
     <p>
@@ -26,7 +27,7 @@
     <p> La parola che hai scritto: <?= $badWord; ?>
     </p>
     <p>
-        Non si dice! : <?= str_replace($badWord, "***", $badWord); ?>
+        Non si dice! : <?= $filter; ?>
     </p>
     <form method="GET" action="">
         <label for="badword">Non scrivere brutte parole</label>
